@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/abok-cymk/contact-form-main]
+- Solution URL: [contact-form-main](https://github.com/abok-cymk/contact-form-main)
 - Live Site URL: []
 
 ## My process
@@ -49,7 +49,7 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [Allan's Portfolio](https://my-portfolio-nylea1kt8-allan-aboks-projects.vercel.app/)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
 - Twitter - [@yourusername](https://www.twitter.com/yourusername)
 

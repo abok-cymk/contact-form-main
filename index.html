@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Contact Us</h1>
+
+      <form action="" id="contact-form">
+        <!-- First Name and Last Name div -->
+        <div class="form-group username">
+          <div>
+            <div>
+              <label for="firstname" class="mb-5">First Name *</label>
+              <input type="text" name="firstname" id="firstname" />
+            </div>
+            <span class="error-message">This field is required</span>
+          </div>
+
+          <div>
+            <div>
+              <label for="lastname" class="mb-5">Last Name *</label>
+              <input type="text" name="lastname" id="lastname" />
+            </div>
+            <span class="error-message">This field is required</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="mb-5">Email Address *</label>
+          <input type="email" name="email" id="email" />
+          <div class="error-message">
+            <span class="" id="valid-email"
+              >Please enter a valid email address</span
+            >
+            <span class="">This field is required</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="query" class="mb-5">Query Type *</label>
+          <div class="query-container">
+            <div class="query-type">
+              <div class="checkme">
+                <input type="radio" name="query" />
+                <span class="types">General Enquiry</span>
+              </div>
+            </div>
+
+            <div class="query-type">
+              <div class="checkme">
+                <input type="radio" name="query" />
+                <span class="types">Support Request</span>
+              </div>
+            </div>
+          </div>
+          <span class="error-message">Please select a query type</span>
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="mb-5">Message *</label>
+          <textarea name="message" id="message" rows="5"></textarea>
+          <span class="error-message">This field is required</span>
+        </div>
+
+        <div class="form-group">
+          <div class="agree">
+            <label for="consent" class="custom-checkbox">
+              <input type="checkbox" name="consent" id="consent" />
+              <svg
+              class="checkbox-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="none"
+                viewBox="0 0 18 18"
+              >
+                <path
+                  fill="#0C7D69"
+                  d="M16.5 0h-15A1.5 1.5 0 0 0 0 1.5v15A1.5 1.5 0 0 0 1.5 18h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 16.5 0Zm-3.22 7.28-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.751.751 0 0 1 1.06 1.06Z"
+                />
+              </svg>
+            </label>
+
+            <span>I consent to being contacted by the team *</span>
+          </div>
+
+          <p class="error-message">
+            To submit this form, please consent to being contacted
+          </p>
+        </div>
+
+        <button type="submit" name="submit" id="submitBtn">Submit</button>
+
+        <div class="success-message" id="success">
+          <h5>Message Sent!</h5>
+          <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+      </form>
+    </div>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

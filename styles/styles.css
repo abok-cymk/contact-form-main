@@ -1,0 +1,247 @@
+:root {
+    /* Primary colors */
+    --green-200: hsl(148, 38%, 91%);
+    --green-600: hsl(169, 88%, 22%);
+    --red: hsl(0, 66%, 54%);
+
+    /* Neutral colors */
+    --white: hsl(0, 0%, 100%);
+    --grey-500: hsl(186, 15%, 59%);
+    --grey-900: hsl(187, 24%, 22%);
+
+    /* Typography */
+    --labels-fs: 16px;
+    --ff-karla: "Karla", sans-serif;
+    --fw-karla-400: 400;
+    --fw-karla-700: 700;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+image, svg {
+    width: 100%;
+    display: block;
+}
+
+body {
+    font-family: var(--ff-karla);
+    font-weight: var(--fw-karla-400);
+    background-color: var(--green-200);
+    line-height: 1.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    font-weight: var(--fw-karla-700);
+    color: var(--grey-900);
+}
+
+.form-container {
+    width: 430px;
+    max-width: 100%;
+    margin: 60px auto;
+    background-color: var(--white);
+    border-radius: 6px;
+    padding: 20px 35px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+.username {
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    display: block;
+    letter-spacing: 0.3px;
+    font-size: 14px;
+    color: var(--grey-500);
+    
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding-inline: 6px;
+    padding-block: 6px;
+    border: 1px solid var(--grey-500);
+    border-radius: 4px;
+}
+
+input:is(:focus-visible, :hover) {
+    outline: 1px solid var(--grey-500);
+    cursor: pointer;
+}
+
+.query-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.checkme {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-start;
+    text-wrap: nowrap;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+.query-type {
+    border: 1px solid var(--grey-500);
+    width: 100%;
+    padding: 5px 20px;
+    border-radius: 4px;
+}
+
+.query-type:is(:focus-visible, :hover) {
+    cursor: pointer;
+    outline: 1px solid var(--grey-500);
+}
+ 
+.types {
+    color: var(--grey-500);
+    font-size: 14px;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+textarea:is(:focus-visible, :hover) {
+    outline: 1px solid var(--grey-500);
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox {
+    /* display: inline-flex; */
+    /* background-color: #f0f0f0f0; */
+    border: 2px solid var(--green-200);
+    height: 14px;
+    width: 14px;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-checkbox:is(:hover, :focus-visible) {
+    border: 1.5px solid var(--green-600);
+}
+
+.checkbox-svg {
+    width: 100%;
+    height: 100%;
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked + .checkbox-svg {
+    background-color: #007bff;
+    opacity: 1;
+    stroke-width: 2;
+}
+
+.agree {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    text-wrap: nowrap;
+}
+
+.agree span {
+    font-size: 14px;
+    color: var(--grey-500);
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 20px;
+    background-color: var(--green-600);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--white);
+}
+.error-message {
+    display: none;
+    font-size: 12px;
+    color: var(--red);
+}
+
+.success-message h5 {
+    color: var(--white);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--labels-fs);
+}
+
+.success-message h5::before {
+    content: url('/assets/images/icon-success-check.svg');
+}
+
+.success-message p {
+    color: var(--grey-500);
+    font-size: 14px;
+}
+.success-message {
+    position: fixed;
+    top: -10px;
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: var(--green-600);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: none;
+    width: 90%;
+    max-width: 400px;
+}
+
+@media (max-width: 375px) {
+    .username,
+    .query-container {
+        flex-direction: column;
+    }
+
+}
